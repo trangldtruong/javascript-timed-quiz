@@ -13,6 +13,9 @@
     
 }
 button {
+    margin: 7px 0;
+    width: 100%;
+    text-align: left;
     position: relative;
     border: 1px solid rgba(27, 31, 35, 0.15);
     border-radius: 6px;
@@ -22,6 +25,7 @@ button {
     font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-weight: 500;
     line-height: 20px;
+    outline: none;
 }
 
 button:hover {
