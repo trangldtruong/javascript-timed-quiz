@@ -55,8 +55,36 @@ const quizContent = [
         correctAnswer: "A.$(this)" 
     }
 ];
-const questionElement = document.getElementById("question")
-const answerElement = document.getElementsByClassName("answers")
-const submitButton = document.getElementById("submit-button")
-
-   
+//get html elements
+var questionElement = document.getElementById("question");
+var answerElement = document.getElementsById("answer");
+var submitButton = document.getElementById("submit-button");
+let currentQuestionIndex = 0;
+let score = 0;
+function showQuestion() {
+    let currentQuestion = quizContent[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    answerElement.innerHTML = "";
+    currentQuestion.answers.forEach(answers => {
+        let li = document.createElement("li");
+        li.textContent = answers;
+        answerElement.appendChild("li");  
+    });
+}
+  // Function to check the selected answer
+  function checkAnswer(event) {
+    const selectedAnswer = event.target.textContent;
+    const currentQuestion = quizContent[currentQuestionIndex];
+    if (selectedAnswer === currentQuestion.correctAnswer) {
+      score++;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < quizContent.length) {
+      showQuestion();
+    } else {
+      alert(`Quiz completed! You score ${score} out of ${quizContent.length}`);
+    }
+  };
+  
+  questionElement.addEventListener("click", checkAnswer());
+  showQuestion();
