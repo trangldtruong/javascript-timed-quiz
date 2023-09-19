@@ -28,12 +28,27 @@ button {
     outline: none;
 }
 
-button:hover {
+button:hover:not([disable]) {
   background-color: yellow;
   color: 
   
 }
-
+#next-button {
+    background: purple;
+    color: white;
+    width: 150px;
+    font-weight: 500;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    display: none;
+}
+.correct{
+    background: lightgreen;
+}
+.incorrect {
+    background: lightcoral;
+}
 
 
 
