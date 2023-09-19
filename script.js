@@ -20,51 +20,42 @@ setTime();
 const questionElement = document.getElementById("questions")
 const answerButton = document.getElementsByClassName("choice")
 var nextButton = document.getElementById("next-button")
-const questions = [
+const quizContent = [
     {
         question: "Which of the following methods is used to access HTML element using Javascript?",
-        answers: [
-            {text: "A.getElementbyId()", correct: false},
-            {text: "B.getElementsByClassName()", correct: false},
-            {text: "C.Both A and B", correct: true},
-            {text: "D.None of the above", correct: false},
-        ]
+        answers: ["A.getElementbyId()", 
+        "B.getElementsByClassName()", 
+        "C.Both A and B", 
+        "D.None of the above"], 
+        correctAnswer: "C.Both A and B"
     },
     {
         question: "What is JavaScript?",
-        answers: [
-            {text: "A.JavaScript is a scripting language used to make the website interactive", correct: true},
-            {text: "B.JavaScript is an assembly language used to make the website interactive", correct: false},
-            {text: "C.JavaScript is a compiled language used to make the website interactive", correct: false},
-            {text: "D.None of the above", correct: false},
-        ]
+        answers: ["A.JavaScript is a scripting language used to make the website interactive", 
+        "B.JavaScript is an assembly language used to make the website interactive", 
+        "C.JavaScript is a compiled language used to make the website interactive", 
+        "D.None of the above"],
+        correctAnswer: "A.JavaScript is a scripting language used to make the website interactive"
+        
     },
     {
         question: "Arrays in JavaScript are defined by which of the following statements?",
-        answers: [
-            {text: "A.It is an ordered list of values", correct: true },
-            {text: "B.It is an ordered list of objects", correct: false},
-            {text: "C.It is an ordered list of string", correct: false},
-            {text: "D.It is an ordered list of functions", correct: false},
-        ]
+        answers: ["A.It is an ordered list of values",
+        "B.It is an ordered list of objects",
+        "C.It is an ordered list of string",
+        "D.It is an ordered list of functions"],
+        correctAnswer: "A.It is an ordered list of values"
     },
     {
         question: "Which of the following object is the main entry point to all client-side JavaScript features and APIs?",
-        answers: [
-            {text: "A.Position", correct: false},
-            {text: "B.Window", correct: true},
-            {text: "C.Standard", correct: false},
-            {text: "D.Location", correct: false},
-        ]
+        answers: ["A.Position", "B.Window", "C.Standard", "D.Location"],
+        correctAnswer: "B.Window"
+        
     },
     {
         question: "Which is the correct jQuery selector to select current HTML element?",
-        answers: [
-            {text: "A.$(this)", correct: true},
-            {text: "B.$(cur)", correct: false},
-            {text: "C.$(.this)", correct: false},
-            {text: "D.$(#this)", correct: false}
-        ]
+        answers: ["A.$(this)","B.$(cur)", "C.$(.this)", "D.$(#this)"],
+        correctAnswer: "A.$(this)" 
     }
 ];
 
