@@ -12,7 +12,7 @@
     border-radius: 20px;
     
 }
-button {
+ul {
     margin: 7px 0;
     width: 100%;
     text-align: left;
@@ -28,28 +28,9 @@ button {
     outline: none;
 }
 
-button:hover:not([disable]) {
+button:hover {
   background-color: yellow;
   color: 
-  
-}
-#next-button {
-    background: purple;
-    color: white;
-    width: 150px;
-    font-weight: 500;
-    padding: 10px;
-    margin: 20px auto 0;
-    border-radius: 4px;
-    display: none;
-}
-.correct{
-    background: lightgreen;
-}
-.incorrect {
-    background: lightcoral;
-}
-
 
 
 
