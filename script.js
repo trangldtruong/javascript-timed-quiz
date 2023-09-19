@@ -17,9 +17,6 @@ function sendMessage() {
 }
 setTime();
 
-const questionElement = document.getElementById("questions")
-const answerButton = document.getElementsByClassName("choice")
-var nextButton = document.getElementById("next-button")
 const quizContent = [
     {
         question: "Which of the following methods is used to access HTML element using Javascript?",
@@ -58,5 +55,8 @@ const quizContent = [
         correctAnswer: "A.$(this)" 
     }
 ];
+const questionElement = document.getElementById("question")
+const answerElement = document.getElementsByClassName("answers")
+const submitButton = document.getElementById("submit-button")
 
-    
+   
