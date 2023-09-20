@@ -84,11 +84,14 @@ function showQuestion() {
     } else {
       clearInterval(timerInterval);
       alert(`Quiz completed! You score ${score} out of ${quizContent.length}`);
+      var initial = window.prompt("your initials");
+      console.log(initial);
     }
   };
 
   answerElement.addEventListener("click", checkAnswer);
   showQuestion();
+  
 //store high scores
 /* .localStorage() check local storage 
 sort any saved scores 

@@ -2,37 +2,32 @@
     float: right;
 }
 * {
-    text-align: center;
+    box-sizing: border-box;
     background-color: skyblue;
-    
+    overflow: hidden;
+    text-align: center;
+}
+h1 {
+    font-family: 
+    text-align: center;
 }
 #main {
-    padding: 20px;
-    border: solid 2px black;
-    border-radius: 20px;
-    
-}
-ul {
-    margin: 7px 0;
-    width: 100%;
-    text-align: left;
-    position: relative;
-    border: 1px solid rgba(27, 31, 35, 0.15);
+    border: 1px solid black;
     border-radius: 6px;
-    font-size: 17px;
-    padding: 6px 16px;
-    background-color: white;
-    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-weight: 500;
-    line-height: 20px;
-    outline: none;
-    display: flex;
 }
 
 button {
-  
-  display: flex;
-  flex-direction: column;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  display: inline-block;
+  border-radius: 5px;
+
 
 }
-
+button:hover {
+    background-color: yellow;
+}
+footer {
+    display: none;
+}
