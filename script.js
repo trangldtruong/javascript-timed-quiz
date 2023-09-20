@@ -8,7 +8,6 @@ function setTime() {
     if((timeLeft === 0) || (currentQuestionIndex > quizContent.length)) {
         clearInterval(timerInterval);
         sendMessage();
-        
     };
     }, 1000);
 }
@@ -59,7 +58,6 @@ const quizContent = [
 //get html elements
 var questionElement = document.getElementById("question");
 var answerElement = document.getElementById("answer");
-var submitButton = document.getElementById("submit-button");
 let currentQuestionIndex = 0;
 let score = 0;
 function showQuestion() {
