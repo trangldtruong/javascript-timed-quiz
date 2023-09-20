@@ -1,14 +1,15 @@
 var timeEl = document.querySelector(".timer");
 var timeLeft = 59;
+var timerInterval;
 function setTime() {
-    var timerInterval = setInterval(function() {
+    timerInterval = setInterval(function() {
         timeLeft--;
         timeEl.textContent = timeLeft;
-    if(timeLeft === 0) {
+    if((timeLeft === 0) || (currentQuestionIndex > quizContent.length)) {
         clearInterval(timerInterval);
         sendMessage();
-
-    }
+        
+    };
     }, 1000);
 }
 function sendMessage() {
@@ -57,7 +58,7 @@ const quizContent = [
 ];
 //get html elements
 var questionElement = document.getElementById("question");
-var answerElement = document.getElementsById("answer");
+var answerElement = document.getElementById("answer");
 var submitButton = document.getElementById("submit-button");
 let currentQuestionIndex = 0;
 let score = 0;
@@ -66,14 +67,15 @@ function showQuestion() {
     questionElement.textContent = currentQuestion.question;
     answerElement.innerHTML = "";
     currentQuestion.answers.forEach(answers => {
-        let li = document.createElement("li");
+        let li = document.createElement("button");
         li.textContent = answers;
-        answerElement.appendChild("li");  
+        answerElement.appendChild(li);  
     });
 }
   // Function to check the selected answer
   function checkAnswer(event) {
     const selectedAnswer = event.target.textContent;
+   // console.log("selectedAnswer", selectedAnswer)
     const currentQuestion = quizContent[currentQuestionIndex];
     if (selectedAnswer === currentQuestion.correctAnswer) {
       score++;
@@ -82,9 +84,15 @@ function showQuestion() {
     if (currentQuestionIndex < quizContent.length) {
       showQuestion();
     } else {
+      clearInterval(timerInterval);
       alert(`Quiz completed! You score ${score} out of ${quizContent.length}`);
     }
   };
-  
-  questionElement.addEventListener("click", checkAnswer());
+
+  answerElement.addEventListener("click", checkAnswer);
   showQuestion();
+//store high scores
+/* .localStorage() check local storage 
+sort any saved scores 
+put saved sorted scores in the html */
+

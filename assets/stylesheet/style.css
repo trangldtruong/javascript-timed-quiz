@@ -26,11 +26,13 @@ ul {
     font-weight: 500;
     line-height: 20px;
     outline: none;
+    display: flex;
 }
 
-button:hover {
-  background-color: yellow;
+button {
   
+  display: flex;
+  flex-direction: column;
 
 }
 
